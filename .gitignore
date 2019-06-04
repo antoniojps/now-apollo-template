@@ -1,4 +1,13 @@
-node_modules/
 npm-debug.log*
 build/
-src/setup/config/config.json
+.idea/
+vendor/
+data/
+.env
+composer.lock
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+.vscode/
+.DS_Store

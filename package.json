@@ -1,5 +1,5 @@
 {
-  "name": "now-serveless-template",
+  "name": "now-apollo-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,10 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.0",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "helmet": "^3.18.0"
+    "apollo-server-micro": "^2.4.8",
+    "graphql": "^14.1.1",
+    "lodash.merge": "^4.6.1"
   }
 }

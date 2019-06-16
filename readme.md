@@ -1,6 +1,6 @@
 # Serverless Now CLI API
 
-Bootstrap a serveless lambda functions API project to deploy at now.
+Bootstrap a serveless express API project to deploy at now.
 
 ## Getting Started
 

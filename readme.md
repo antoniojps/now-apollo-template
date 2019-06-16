@@ -1,6 +1,25 @@
-# Serverless Now CLI API
+# Serverless Apollo Graphql Micro-service for Now CLI
 
-Bootstrap a serveless express API project to deploy at now.
+Bootstrap a serverless apollo graphql API project to deploy at now.
+
+## Demo
+
+Here's the demo deployed to now: [GraphQL Playground Demo](https://now-apollo-template-m65tlpnl0.now.sh/)
+
+Test this query:
+
+```graphql
+query Books {
+  books {
+    id
+    title
+    rating
+    author {
+      firstName
+    }
+  }
+}
+```
 
 ## Getting Started
 
@@ -16,8 +35,8 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone
 
 ```
-git clone https://github.com/antoniojps/now-serverless-template.git
-cd now-serverless-template
+git clone https://github.com/antoniojps/now-apollo-template.git
+cd now-apollo-template
 ```
 
 2. Start developing
@@ -26,7 +45,7 @@ cd now-serverless-template
 now dev
 ```
 
-Your functions are now running at `http://localhost:3000/api/hello.js`!
+Your functions are now running at `http://localhost:3000/`!
 
 ## Deployment
 
@@ -38,14 +57,13 @@ now --target production
 
 ## Configuration
 
-The base configuration is at `now.json`, notices now to use the version 2 of now, which is cheaper and prefered, it also instructs now to build all the files within the api folder with the `@now/node` modules to be installed.
+The base configuration is at `now.json` it instructs now to build the server.js with the `@now/node` modules.
 
 ```json
 {
   "version": 2,
-  "name": "change-this",
-  "builds": [{ "src": "api/**/*.js", "use": "@now/node" }],
-  "alias": ["change-this"]
+  "builds": [{ "src": "server.js", "use": "@now/node" }],
+  "routes": [{ "src": "/.*", "dest": "server.js" }]
 }
 ```
 

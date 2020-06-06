@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-micro": "^2.4.8",
+    "apollo-server-micro": "^2.14.2",
     "graphql": "^14.1.1",
     "lodash.merge": "^4.6.2",
     "micro-cors": "^0.1.1"
